@@ -1,4 +1,6 @@
 const Post = require("../models/Post");
+const sendgrid = require("@sendgrid/mail");
+sendgrid.setApiKey(process.env.SENDGRIDKEY);
 
 exports.viewCreatePost = (req, res) => {
   res.render("create-post");

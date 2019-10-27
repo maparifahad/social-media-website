@@ -1,0 +1,10 @@
+@media only screen and (max-width: 767px) {
+  #brandname {
+    display: block;
+    margin-bottom: 1.3rem;
+  }
+
+  #loginbtn {
+    width: 100%;
+  }
+}

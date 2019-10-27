@@ -22,6 +22,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <header class="header-bar mb-3">
@@ -29,10 +30,11 @@
         class="container d-flex flex-column flex-md-row align-items-center p-3"
       >
         <h4 class="my-0 mr-md-auto font-weight-normal">
-          <a href="/" class="text-white">&lt;HelloWorld/&gt;</a>
+          <a href="/" class="text-white" id="brandname">&lt;HelloWorld/&gt;</a>
         </h4>
         <% if(user){ %>
-        <div class="flex-row my-3 my-md-0">
+
+        <div class="flex-row my-3 my-md-0 dashboard-box">
           <a
             href="#"
             class="text-white mr-2 header-search-icon"
@@ -58,9 +60,11 @@
               width="128px"
               height="128px"
           /></a>
+
           <a class="btn btn-sm btn-success mr-2" href="/create-post"
             >Create Post</a
           >
+
           <form action="/logout" method="POST" class="d-inline">
             <button class="btn btn-sm btn-secondary">Sign Out</button>
           </form>
@@ -86,7 +90,9 @@
               />
             </div>
             <div class="col-md-auto">
-              <button class="btn btn-primary btn-sm">Sign In</button>
+              <button id="loginbtn" class="btn btn-primary btn-sm">
+                Sign In
+              </button>
             </div>
           </div>
         </form>
