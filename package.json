@@ -1,0 +1,39 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "a social network for developers",
+  "main": "app.js",
+  "scripts": {
+    "watch": "start nodemon db --ignore frontend-js --ignore public && start webpack --watch",
+    "webpack": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fahad mapari",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "bcrypt": "^3.0.6",
+    "cloudinary": "^1.14.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.0.0",
+    "cors": "^2.8.5",
+    "csurf": "^1.10.0",
+    "dompurify": "^2.0.7",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "jsonwebtoken": "^8.5.1",
+    "marked": "^0.7.0",
+    "mongodb": "^3.3.2",
+    "multer": "^1.4.2",
+    "sanitize-html": "^1.20.1",
+    "socket.io": "^2.3.0",
+    "validator": "^11.1.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  }
+}

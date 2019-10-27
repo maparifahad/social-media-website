@@ -1,0 +1,45 @@
+<h2>
+  <img
+    class="avatar-small"
+    src="http://www.shaadidesk.com/wp-content/uploads/2015/08/create-profile.png"
+  />
+  <%=profileUsername%> <% if(user && !isProfileOwner){ if(isFollowing){ %>
+  <form
+    class="ml-2 d-inline"
+    action="/removefollow/<%=profileUsername%>"
+    method="POST"
+  >
+    <button class="btn btn-danger btn-sm">
+      Stop Following <i class="fas fa-user-times"></i>
+    </button>
+  </form>
+  <% }else{ %>
+  <form
+    class="ml-2 d-inline"
+    action="/addfollow/<%=profileUsername%>"
+    method="POST"
+  >
+    <button class="btn btn-primary btn-sm">
+      Follow <i class="fas fa-user-plus"></i>
+    </button>
+  </form>
+  <% } } %>
+</h2>
+
+<div class="profile-nav nav nav-tabs pt-2 mb-4">
+  <a
+    href="/profile/<%=profileUsername%>"
+    class="profile-nav-link nav-item nav-link <%= page === 'posts' ? 'active' : '' %>"
+    >Posts: <%= postsCount %>
+  </a>
+  <a
+    href="/profile/<%=profileUsername%>/followers"
+    class="profile-nav-link nav-item nav-link <%= page === 'followers' ? 'active' : '' %>"
+    >Followers: <%= followerCount %></a
+  >
+  <a
+    href="/profile/<%=profileUsername%>/following"
+    class="profile-nav-link nav-item nav-link <%= page === 'following' ? 'active' : '' %>"
+    >Following: <%= followingCount %></a
+  >
+</div>
