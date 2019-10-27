@@ -27,6 +27,7 @@
   <body>
     <header class="header-bar mb-3">
       <div
+        id="dashboard-icons"
         class="container d-flex flex-column flex-md-row align-items-center p-3"
       >
         <h4 class="my-0 mr-md-auto font-weight-normal">
@@ -37,20 +38,20 @@
         <div class="flex-row my-3 my-md-0 dashboard-box">
           <a
             href="#"
-            class="text-white mr-2 header-search-icon"
+            class="text-white mr-2 header-search-icon dash-icon"
             title="Search"
             data-toggle="tooltip"
             data-placement="bottom"
             ><i class="fas fa-search"></i
           ></a>
           <span
-            class="text-white mr-2 header-chat-icon"
+            class="text-white mr-2 header-chat-icon dash-icon"
             title="Chat"
             data-toggle="tooltip"
             data-placement="bottom"
             ><i class="fas fa-comment"></i
           ></span>
-          <a href="/profile/<%=user.username%>" class="mr-2"
+          <a href="/profile/<%=user.username%>" class="mr-2  dash-icon"
             ><img
               title="My Profile"
               data-toggle="tooltip"
@@ -61,12 +62,17 @@
               height="128px"
           /></a>
 
-          <a class="btn btn-sm btn-success mr-2" href="/create-post"
+          <a
+            id="createpostbtn"
+            class="btn btn-sm btn-success mr-2"
+            href="/create-post"
             >Create Post</a
           >
 
           <form action="/logout" method="POST" class="d-inline">
-            <button class="btn btn-sm btn-secondary">Sign Out</button>
+            <button id="signoutbtn" class="btn btn-sm btn-secondary">
+              Sign Out
+            </button>
           </form>
         </div>
         <% }else{ %>

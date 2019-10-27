@@ -1,4 +1,7 @@
 @media only screen and (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
   #brandname {
     display: block;
     margin-bottom: 1.3rem;
@@ -6,5 +9,21 @@
 
   #loginbtn {
     width: 100%;
+  }
+  .dashboard-box {
+    width: 100%;
+  }
+
+  #signoutbtn,
+  #createpostbtn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+  .dash-icon {
+    display: inline-block;
+    margin-left: 19%;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
   }
 }
