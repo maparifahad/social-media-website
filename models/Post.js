@@ -109,9 +109,11 @@ Post.postQuery = function(aggOp, visitorId) {
     posts = posts.map(post => {
       post.isPostOwner = post.authorId.equals(visitorId);
       post.authorId = undefined;
+
       post.author = {
         username: post.author.username
       };
+
       return post;
     });
 
